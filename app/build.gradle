@@ -17,6 +17,11 @@ android {
         vectorDrawables {
             useSupportLibrary true
         }
+
+        // read local.properties file
+        Properties properties = new Properties()
+        properties.load(project.rootProject.file('local.properties').newDataInputStream())
+        buildConfigField "String", "URL_API", "\"${properties.getProperty('URL_API')}\""
     }
 
     buildTypes {
