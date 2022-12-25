@@ -10,12 +10,12 @@ class Product(
 
 }
 
-class category(
+class Category(
     val name: String,
     val products: MutableList<Product>
 )
 
 class ItemInCart(
     var product: Product,
-    quantity: Int
+    var quantity: Int
 )
