@@ -12,12 +12,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.text.TextStyle
-import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import ca.josue.coffeemasters.ui.theme.Alternative1
 import ca.josue.coffeemasters.ui.theme.Alternative2
 
@@ -34,25 +31,17 @@ import ca.josue.coffeemasters.ui.theme.Alternative2
 @Composable
 fun OfferPage() {
     Column(
-        Modifier.verticalScroll(rememberScrollState())
+        modifier = Modifier.verticalScroll(rememberScrollState())
     ) {
-        Offer(title = "Early Coffe", description = "10% off. Offer valid from 6am to 9am.")
+        Offer(title = "Early Coffee", description = "10% off. Offer valid from 6am to 9am.")
         Offer(title = "Welcome Gift", description = "25% off on your first order.")
         Offer(title = "Welcome Gift", description = "25% off on your first order.")
-        Offer(title = "Early Coffe", description = "10% off. Offer valid from 6am to 9am.")
-        Offer(title = "Welcome Gift", description = "25% off on your first order.")
-        Offer(title = "Welcome Gift", description = "25% off on your first order.")
+        Offer(title = "Early Coffee", description = "10% off. Offer valid from 6am to 9am.")
     }
 }
 
 @Composable
 fun Offer(title: String, description: String) {
-    val style = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.Normal,
-        fontSize = 16.sp
-    )
-
     Box(
         modifier = Modifier.padding(16.dp)
     ){
