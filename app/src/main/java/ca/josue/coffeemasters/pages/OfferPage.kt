@@ -1,4 +1,4 @@
-package ca.josue.coffeemasters
+package ca.josue.coffeemasters.pages
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -15,17 +15,17 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import ca.josue.coffeemasters.R
 import ca.josue.coffeemasters.ui.theme.Alternative1
 import ca.josue.coffeemasters.ui.theme.Alternative2
 
-//@Preview(showBackground = true, widthDp = 400)
-//@Composable
-//private fun OfferPage_Preview() {
-//    Offer(
-//        title = "Café de la semaine",
-//        description = "Café de la semaine",
-//    )
-//}
+@Composable
+private fun OfferPage_Preview() {
+    Offer(
+        title = "Café de la semaine",
+        description = "Café de la semaine",
+    )
+}
 
 @Preview(showBackground = true)
 @Composable

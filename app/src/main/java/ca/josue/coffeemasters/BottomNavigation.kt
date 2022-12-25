@@ -27,7 +27,7 @@ data class NavPage(var name: String, var icon: ImageVector, var route: String)
 object Routes {
     val MENU = NavPage("Home", Icons.Outlined.Menu, "menu")
     val OFFERS = NavPage("Offer", Icons.Outlined.Star, "offer")
-    val ORDERS = NavPage("Offer", Icons.Outlined.ShoppingCart, "order")
+    val ORDERS = NavPage("Order", Icons.Outlined.ShoppingCart, "order")
     val INFO = NavPage("Profile", Icons.Outlined.Info, "info")
 
     val pages = listOf(MENU, OFFERS, ORDERS, INFO)

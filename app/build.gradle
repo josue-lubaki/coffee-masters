@@ -58,4 +58,16 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
     androidTestImplementation "androidx.compose.ui:ui-test-junit4:$compose_version"
     debugImplementation "androidx.compose.ui:ui-tooling:$compose_version"
+
+    // Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+
+    // OkHttp
+    implementation("com.squareup.okhttp3:okhttp:5.0.0-alpha.2")
+
+    // JSON Converter
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
+
+    // AsyncImage
+    implementation("io.coil-kt:coil-compose:2.0.0-rc03")
 }
