@@ -54,7 +54,6 @@ fun FirstComposables() {
             onValueChange = {
                 name.value = it
             },
-            modifier = Modifier.padding(start = 16.dp)
         )
     }
 }
