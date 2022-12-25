@@ -1,6 +1,5 @@
 package ca.josue.coffeemasters
 
-import android.annotation.SuppressLint
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -14,14 +13,11 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.unit.dp
 import ca.josue.coffeemasters.pages.InfoPage
 import ca.josue.coffeemasters.pages.MenuPage
 import ca.josue.coffeemasters.pages.OfferPage
 import ca.josue.coffeemasters.pages.OrderPage
 
-
-@SuppressLint("UnusedMaterialScaffoldPaddingParameter")
 @Composable
 fun App(dataManager : DataManager) {
     val selectedRoute = remember {
@@ -35,7 +31,7 @@ fun App(dataManager : DataManager) {
             }
         },
         content = {
-            Box(modifier = Modifier.padding(bottom = 56.dp)) {
+            Box(modifier = Modifier.padding(it)) {
                 when(selectedRoute.value) {
                     Routes.OFFERS.route -> OfferPage()
                     Routes.MENU.route -> MenuPage(dataManager)

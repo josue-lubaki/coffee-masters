@@ -25,7 +25,7 @@ import ca.josue.coffeemasters.ui.theme.onPrimary
 data class NavPage(var name: String, var icon: ImageVector, var route: String)
 
 object Routes {
-    val MENU = NavPage("Home", Icons.Outlined.Menu, "menu")
+    val MENU = NavPage("Menu", Icons.Outlined.Menu, "menu")
     val OFFERS = NavPage("Offer", Icons.Outlined.Star, "offer")
     val ORDERS = NavPage("Order", Icons.Outlined.ShoppingCart, "order")
     val INFO = NavPage("Profile", Icons.Outlined.Info, "info")

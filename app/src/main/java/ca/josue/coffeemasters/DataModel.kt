@@ -6,7 +6,7 @@ class Product(
     var price: Double,
     var image: String
 ){
-    val imageUrl get() = "https://firtman.github.io/coffeemasters/api/images/${this.image}"
+    val imageUrl get() = "${BuildConfig.URL_API}images/${this.image}"
 }
 
 class Category(

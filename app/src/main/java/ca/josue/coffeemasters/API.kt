@@ -11,7 +11,7 @@ interface CoffeeMastersApiService {
 
 object API {
     private val retrofit: Retrofit = Retrofit.Builder()
-        .baseUrl("https://firtman.github.io/coffeemasters/api/")
+        .baseUrl(BuildConfig.URL_API)
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 

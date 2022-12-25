@@ -16,7 +16,7 @@ class DataManager(app : Application) : AndroidViewModel(app) {
         fetchData()
     }
 
-    fun fetchData () {
+    private fun fetchData () {
         viewModelScope.launch {
             menu = API.menuService.fetchMenu()
             println(menu)
