@@ -5,6 +5,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material.Scaffold
+import androidx.compose.material.Text
 import androidx.compose.material.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -30,7 +31,9 @@ fun App() {
                 AppTitle()
             }
         },
-        bottomBar = {}
+        bottomBar = {
+            Text("I'am the bottom bar")
+        }
     ){
         OfferPage()
     }
