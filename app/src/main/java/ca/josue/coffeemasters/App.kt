@@ -16,6 +16,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import ca.josue.coffeemasters.pages.InfoPage
+import ca.josue.coffeemasters.pages.MenuPage
+import ca.josue.coffeemasters.pages.OrderPage
 import ca.josue.coffeemasters.ui.theme.CoffeeMastersTheme
 
 @Preview
@@ -29,12 +32,24 @@ fun App_Preview() {
 @SuppressLint("UnusedMaterialScaffoldPaddingParameter")
 @Composable
 fun App() {
-    val selectedRoute = remember{ mutableStateOf(Routes.MENU.route) }
+    val selectedRoute = remember {
+        mutableStateOf(Routes.MENU.route)
+    }
 
     Scaffold(
         topBar = {
             TopAppBar {
                 AppTitle()
+            }
+        },
+        content = {
+            Box(modifier = Modifier.padding(bottom = 56.dp)) {
+                when(selectedRoute.value) {
+                    Routes.OFFERS.route -> OfferPage()
+                    Routes.MENU.route -> MenuPage()
+                    Routes.ORDERS.route -> OrderPage()
+                    Routes.INFO.route -> InfoPage()
+                }
             }
         },
         bottomBar = {
@@ -47,11 +62,7 @@ fun App() {
                 )
             }
         }
-    ){
-        Box(modifier = Modifier.padding(bottom = 56.dp)) {
-            OfferPage()
-        }
-    }
+    )
 }
 
 @Composable
